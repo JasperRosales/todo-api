@@ -5,3 +5,8 @@ run:
 
 test:
 	@go test ./tests/.
+
+push:
+	@git add .
+	@git commit -m "$(m)"
+	@git push
