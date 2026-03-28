@@ -8,12 +8,13 @@ import (
 	"github.com/joho/godotenv"
 
 	"github.com/JasperRosales/todo-api/internal/database"
+	"github.com/JasperRosales/todo-api/internal/middleware"
 	"github.com/JasperRosales/todo-api/internal/routes"
 )
 
-
 func main() {
 	r := gin.Default()
+	r.Use(middleware.RateLimitMiddleware())
 
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
@@ -35,5 +36,4 @@ func main() {
 	}
 
 	r.Run(":" + port)
-
 }
