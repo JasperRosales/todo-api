@@ -3,7 +3,9 @@
 A practice api for testing my backend skills only using the documentation while reading the project guidelines from roadmap.sh. 
 
 
-project url: https://roadmap.sh/projects/todo-list-api
+https://roadmap.sh/projects/todo-list-api
+
+
 ---
 
 ## Requirements: 
